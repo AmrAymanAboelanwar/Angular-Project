@@ -1,0 +1,37 @@
+<div id="mainContainer">
+  <section id="blog" class=" p-5  w-50 container-fluid mt-5">
+          <!--blog content-->
+
+         <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+          <div class="  text-center">
+
+            <img  id="userImg" [src]="imageURL "  />
+              <span id="cam" class="ml-3">
+                <!-- <img src="/assets/cam.png" height="30px" width="30px"> -->
+                  <label for="file-input">
+                    <!-- <img src="/assets/cam.png" height="30px" width="30px">  -->
+                    <i class="fa fa-camera" style="font-size: 25px; color: rgb(114, 151, 114);"></i>
+                  </label>
+                <input id="file-input" type="file" (change)="onFileSelect($event)" />
+            </span>
+          </div>
+
+          <div class="form-group">
+          <label for="name">Title</label>
+          <input type="text" class="form-control col-12 d-inline "  formControlName="title" value="{{blog.title}}">
+          </div>
+
+          <div class="form-group">
+            <label for="email">Body</label>
+            <textarea id="title" class="form-control col-12 d-inline " formControlName="body"  rows="3" style="resize: none;" ></textarea>
+          </div>
+
+          <div id="editBTN">
+            <button type="submit" class="btn btn-light " style="color: black;">Edit</button>
+          </div>
+        </form>
+  </section>
+  <div id="emptyContainer">aaaaaaaaaa</div>
+</div>
+
+

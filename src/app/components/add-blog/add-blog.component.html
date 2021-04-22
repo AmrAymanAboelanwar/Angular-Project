@@ -1,0 +1,39 @@
+<div id="mainContainer">
+  <p class="text-success text-center" *ngIf="msg!=null">
+    {{msg}}
+  </p>  <div class="container-fluid w-50" id="cotainer">
+
+    <div id="userData">
+      <img src="{{'http://localhost:9000/'+user.img}}" id="userImg"/>
+        <span id="name" class="ml-3">
+          {{user.Name}}
+        </span>
+    </div>
+
+<form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+
+      <input  id="title" type="email" class="form-control col-12 d-inline" formControlName="title" placeholder="Enter email" placeholder="title">
+
+    </div>
+    <div class="form-group">
+
+      <textarea id="title" class="form-control col-12 d-inline " formControlName="body"  rows="3" placeholder="Waht in your mind?" style="resize: none;" ></textarea>
+    </div>
+
+    <div class="form-group">
+        <input type="file"  formControlName="img" (change)="onFileSelect($event)" >
+
+        <div class="imagePreview " *ngIf="imageURL && imageURL !== ''">
+          <img [src]="imageURL " class="fad fa-image-polaroid" width="100px"  height="100px">
+        </div>
+
+      </div>
+    <div id="submitBTN">
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+    </form>
+
+  </div>
+
+</div>

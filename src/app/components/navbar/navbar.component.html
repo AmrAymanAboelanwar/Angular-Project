@@ -1,0 +1,45 @@
+<!-- <header> -->
+
+	<nav class="navbar navbar-expand-lg sticky-top" *ngIf="flag">
+		<div class="container">
+			<a class="navbar-brand text-white" href="/home"><i class="fa fa-graduation-cap fa-lg mr-2"></i>BLOG</a>
+
+
+
+            <div class="input-group" *ngIf="searchflag">
+                <div class="form-outline ">
+                  <input type="search" id="form1" class="form-control" placeholder="search" #val/>
+
+                </div>
+                <button type="button" class="btn btn-light" id="searchbtn" (click)="search(val.value)">
+                  <i class="fa fa-search"></i>
+                </button>
+
+              </div>
+
+
+
+
+			<div  class="w-50">
+				<ul class="navbar-nav ml-auto  ">
+
+					<li class="nav-item pl-1">
+						<a class="nav-link" routerLink="/blog/add"><i class="fa fa-plus fa-fw fa-rotate-180 mr-1"></i>add Blog</a>
+					</li>
+					<li class="nav-item pl-1">
+						<a class="nav-link" routerLink="/user/profile"><i class="fa fa-user-plus fa-fw mr-1"></i>profile</a>
+					</li>
+					<li class="nav-item pl-1">
+
+                        <label for="button1">
+                            <a class="nav-link"><i class="fa fa-sign-in fa-fw mr-1"></i>logout</a>
+                          </label>
+                          <input id="button1" type="button" (click)="logout()" />
+
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<!-- </header> -->

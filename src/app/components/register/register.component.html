@@ -1,0 +1,50 @@
+<div class="body">
+  <div class="page-wrapper bg-gra-01 p-t-180  font-poppins">
+    <div class="wrapper wrapper--w780">
+        <div class="card card-3">
+            <div class="card-heading"></div>
+            <div class="card-body">
+
+              <p class="error d-inline-bloc" *ngIf="error!=null">
+                {{error}}
+              </p>
+              <p class=" text-success d-inline-bloc" *ngIf="accepted!=null">
+                {{accepted}}
+              </p>
+
+                <h2 class="title">Registration Info</h2>
+                <form [formGroup]="regform"  (ngSubmit)="onsubmit()">
+                    <div class="input-group">
+                      <input type="text"  [class.is-valid]="regform.controls['UserName'].valid" formControlName="UserName" class=" input--style-3" aria-describedby="helpId" placeholder="Username">
+                    </div>
+                    <div class="input-group">
+                      <input type="text" [class.is-valid]="regform.controls['Name'].valid" formControlName="Name" class="input--style-3" aria-describedby="helpId" placeholder="Name">
+                    </div>
+                    <div class="input-group">
+                      <input type="password" [class.is-valid]="regform.controls['Password'].valid" formControlName="Password" class="input--style-3" placeholder="Password">
+                    </div>
+                    <div class="input-group">
+                      <input type="email" [class.is-valid]="regform.controls['Email'].valid" formControlName="Email" class="input--style-3" aria-describedby="emailHelpId" placeholder="Email">
+                    </div>
+                 
+                       
+                       
+                      <div class="  text-center">
+       
+                        <img  id="userImg" [src]="imageURL " *ngIf="imageURL && imageURL !== ''" />
+                            <span id="cam" class="ml-3">
+                                <label for="file-input">
+                                  <i class="fa fa-camera" style="font-size:22px;color: rgb(253, 253, 253);"></i>
+                                </label>
+                                <input id="file-input" type="file" (change)="onFileSelect($event)" />
+                            </span>
+                       </div>
+                    <div class="p-t-10">
+                        <input type="submit" class="btn btn--pill btn--green" type="submit" value="create">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

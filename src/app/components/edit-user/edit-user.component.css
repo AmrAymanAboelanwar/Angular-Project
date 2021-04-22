@@ -1,0 +1,82 @@
+#mainContainer::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url('../../../assets/bgEdits.jpg');
+  background-size: cover;
+  background-position: top center;
+  opacity: 0.2;
+}
+
+#blog{
+    background-color:#526b72c4;
+    border-radius: 10px;
+    margin-top: 10vh;
+    position: relative;
+    text-align: center;
+}
+#blog:hover{
+  background-color:#526b72de;
+  transform: scale(1.01, 1.01) skewX(1deg);
+  box-shadow: 5px 5px 10px grey, -5px -5px 10px grey;
+  font-weight: bolder;
+  transition: 1s;
+}
+
+#userImg{
+  border-radius: 50%;
+  width: 20vh;
+  height:200px;
+  border: none;
+  border-right: 1px solid grey;
+  margin-bottom: 8px;
+}
+#userImg:hover{
+  transform: skewY(180deg);
+  transition: 1s;
+}
+
+#cam{
+    position: relative;
+    right: 3.5vh;
+    border-radius: 10%;
+    padding: 2px;
+}
+
+#cam>input {
+    display: none;
+}
+
+input{
+  width: 40%;
+  background-color: rgb(241, 247, 244);
+  border-style: none;
+  /* border-radius: 20px; */
+}
+
+input:hover{
+  background-color: rgb(221, 247, 246);
+  cursor: pointer;
+  transform: skewX(-5deg) scale(1.01,1.01);
+  transition: 1s;
+}
+input:focus{
+  background-color: rgb(108, 143, 141);
+  color: white;
+}
+
+.labels{
+  display: block;
+  /* color: white; */
+}
+
+#editBTN{
+  text-align: start;
+  margin-left: 17em;
+  margin-top: 2em;
+  margin-bottom: 1em;
+}
+

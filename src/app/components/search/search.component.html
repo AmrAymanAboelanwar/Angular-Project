@@ -1,0 +1,29 @@
+<div class="body" >
+<h5 class="header m-auto col-6 p-2" style="color: rgb(231, 229, 229);">Search Results</h5>
+  <div class="col-6 m-auto p-4" *ngFor="let user of users">
+    <div class="card horizontal">
+
+      <div class="card-stacked">
+
+        <div class="card-content">
+          <div>
+            <img src="{{'http://localhost:9000/'+user.img}}" id="userImg"/>
+            <div class="d-inline">
+                <span id="name" class="ml-3">
+                  {{user.Name}}
+                </span>
+                <span class="ml-5 float-right my-4 mr-5">
+                  <a routerLink="/view-user/{{user._id}}">view Profile</a>
+                </span>
+            </div>
+
+           </div>
+
+        </div>
+        <div class="card-action">
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

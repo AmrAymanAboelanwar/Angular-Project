@@ -1,0 +1,133 @@
+<div class="loader" *ngIf="!flag"></div>
+
+<main class=" pt-5 s" *ngIf="flag">
+  <div class="container">
+
+    
+    <section class="card wow fadeIn" style="background-image: url(https://mdbootstrap.com/img/Photos/Others/gradient1.jpg);">
+
+    
+      <div class="card-body text-white text-center py-5 px-5 my-5">
+
+        <h1 class="mb-4">
+          <strong>Welcome {{user.Name}} In Your Blog</strong>
+        </h1>
+        <p>
+          <strong>Take your time to check all things</strong>
+        </p>
+        <p class="mb-4">
+          <strong>The pain you feel today will be the strength you feel tomorrow.
+            The pain you feel today will be the strength you feel tomorrow.
+            The pain you feel today will be the strength you feel tomorrow.
+</strong>
+        </p>
+
+
+      </div>
+     
+    </section>
+    
+
+    <hr class="my-5">
+
+  
+    <section class="text-center">
+
+
+      
+      <div class="row mb-4 wow fadeIn">
+
+
+
+      
+        <div class="col-lg-4 col-md-6 mb-4" *ngFor="let b of blogs">
+
+          
+          <div class="card bg-dark text-light">
+       
+            <div class="d-flex bg-dark ">
+              <img src="{{'http://localhost:9000/'+b.author.img}}" id="userImgBlog"/>
+
+              <span class="m-3 text-light " >{{b.author.Name}}</span>
+           </div>
+           <hr>
+           
+            <div class="view overlay">
+              <img src="{{'http://localhost:9000/'+b.img}}"  class="card-img-top" alt="" height="250vw" >
+
+
+            </div>
+
+           
+            <div class="card-body">
+            
+              <h4 class="card-title">{{b.title}}</h4>
+              
+              <p class=" d-inline card-text">{{b.body.substring(0,201)}}..</p>
+              <a routerLink="/blog/get/{{b._id}}"  class=" link btn btn-md">show more
+
+              </a>
+            </div>
+
+          </div>
+        
+
+        </div>
+       
+
+      </div>
+      
+
+
+
+    </section>
+    
+
+  </div>
+
+
+  <footer class="bg-dark text-center text-white">
+   
+    <div class="container p-4 pb-0">
+     
+      <section class="mb-4">
+       
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i class="fa fa-facebook-f"></i
+        ></a>
+  
+        
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i class="fa fa-twitter"></i
+        ></a>
+  
+       
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i class="fa fa-google"></i
+        ></a>
+  
+      
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i class="fa fa-instagram"></i
+        ></a>
+  
+     
+  
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i class="fa fa-github"></i
+        ></a>
+      </section>
+     
+    </div>
+    
+  
+    
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2021 Copyright:
+      <a class="text-white" href="http://localhost:4200/home">AMA.com</a>
+    </div>
+  
+  </footer>
+
+</main>
+

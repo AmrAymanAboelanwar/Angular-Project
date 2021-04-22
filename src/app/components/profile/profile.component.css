@@ -1,0 +1,144 @@
+*{
+  color: white;
+}
+
+
+#mainContainer::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url('../../../assets/bgProfile.jpg');
+  background-size: cover;
+  background-position: top center;
+  opacity: 1;
+}
+
+#body{
+  position: relative;
+  /* background-color: #18191A; */
+}
+
+#topSection{
+    background-color: #393E46;
+    border-radius: 20px ;
+
+}
+#topSection:hover{
+  background-color: #4b6681;
+  border-radius: 5px;
+  transform: scaleX(1.02);
+  box-shadow: 5px 5px 10px rgba(50, 50, 50, 0.823);
+  transition: 1s;
+}
+
+#userImg{
+  width: 11vh;
+  height:100px;
+  margin-bottom: 8px;
+  border: none;
+  border-left: 1px solid white;
+  border-top: 1px solid white;
+  border-radius: 50%;
+}
+#userImg:hover{
+  transform: skewX(180deg);
+  box-shadow: 2px 2px 5px white, -0px -0px 5px black;
+  border: none;
+  transition: 1s;
+}
+
+#name{
+  color: white;
+  font-family: Verdana;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+#blog{
+  background-image: linear-gradient(to bottom right, rgb(79, 90, 94), rgb(22, 25, 26), rgb(161, 187, 192));
+  border-radius: 10px;
+}
+#blog:hover{
+  transform: scaleX(1.01);
+  box-shadow: 5px 5px 10px rgba(85, 92, 91, 0.534);
+  transition: 1s;
+}
+
+#userImgBlog{
+  border-radius: 50%;
+  width: 5vh;
+  height:50px;
+  margin-bottom: 8px;
+  border: none;
+  border-bottom: 1px solid rgb(42, 42, 41);
+  border-radius: 50%;
+}
+#userImgBlog:hover{
+  transform: scale(1.1,1.1);
+  border-left: 1px solid white;
+  border-top: 1px solid white;
+  border-bottom: none;
+  border-radius: 50%;
+  transition: 1s;
+}
+
+hr{
+  background-color:white;
+  width: 70%;
+  box-shadow: 1px 1px 5px grey;
+}
+.coloredHR{
+  background-color: rgb(241, 245, 224);
+  width: 100%;
+}
+
+#title{
+  color: rgb(182, 155, 2);
+  font-weight: bold;
+}
+#title:hover{
+  color: rgb(83, 133, 2);
+  font-weight: bolder;
+  transition: 1s;
+}
+
+.f{
+    font-size: 0.8rem;
+}
+h5{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 100;
+}
+#FollImg{
+
+    border-radius:50%;
+    width: 40%;
+    height:120px;
+    border: 1px solid black;
+    margin-bottom: 8px;
+}
+.f{
+    overflow: auto;
+}
+#editUser{
+   font-size: 30px;
+
+}
+#editUser:hover{
+    color: rgb(183, 182, 185);
+    text-decoration-line: none;
+}
+.navbar{
+    box-shadow: gray 20px 20px 70px;
+    background-color:   #18191A;
+
+}
+#deleteBlog{
+color: cadetblue;
+font-size: 18px;
+vertical-align: bottom;
+}
+

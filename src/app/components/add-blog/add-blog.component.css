@@ -1,0 +1,69 @@
+#mainContainer::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url('../../../assets/bg.jpg');
+  background-size: cover;
+  background-position: top center;
+  opacity: 0.1;
+}
+
+#cotainer{
+    margin-top: 8%;
+    background-color: rgba(255, 255, 255, 0.521);
+    box-shadow: gainsboro 5px 5px 30px, rgb(197, 197, 197) -0px -0px 10px;
+    padding: 2%;
+    border-radius:1%;
+    position: relative;
+    text-align: center;
+}
+#cotainer:hover{
+  transform: scale(1.01, 1.01) skewX(-1deg);
+  font-weight: bolder;
+  transition: 1s;
+}
+
+#userData{
+  color: #1E282E;
+  text-shadow: 8px 8px 10px rgb(125, 142, 145);
+  font-family: Verdana;
+  /* background-color: red;
+display: inline;
+text-align: center; */
+}
+
+#userImg{
+  border-radius: 50%;
+  width: 9vh;
+  height:80px;
+  /* border: 1px solid cornflowerblue; */
+  margin-bottom: 8px;
+}
+#userImg:hover{
+  transform: skewX(180deg);
+  transition: 1s;
+}
+
+input, textarea {
+  width: 80%;
+  background-color: rgba(219, 230, 241, 0.507);
+  outline: none;
+  border: none;
+}
+input:focus{
+    border: none;
+    box-shadow: none;
+}
+input:hover,textarea:hover{
+  background-color: rgb(232, 252, 251);
+  cursor: pointer;
+}
+
+#submitBTN{
+  text-align: start;
+  margin-left: 10em;
+}
+

@@ -1,0 +1,102 @@
+<div id="mainContainer">
+
+  <div id="body">
+    <div class="container " style="padding:30px;" >
+      <section id="topSection">
+
+        <div class="d-inline " *ngIf="user.img">
+            <img src="{{'http://localhost:9000/'+user.img}}" id="userImg" class="mt-4 ml-3" />
+            <span id="name" class="ml-3"> {{user.Name}} </span>
+        </div>
+
+        <a class="float-right mt-5 mr-5 pl-3 pr-3" routerLink="/user/profile/edit" ><i id="editUser" class="fa fa-edit"></i></a>
+
+    </section>
+
+    <div class=" row col-12">
+      <div class="  col-8">
+
+
+           
+    <div class="bg-dark  p-5"  *ngIf="blogs.length==0" style="margin-top: 50px; border-radius: 100px;">
+
+         <span style="font-size:18px;margin-left: 200px;">you don't have blogs</span>
+    </div>
+
+
+        <section id="blog" class="dg-warning p-2  mt-2"  *ngFor="let b of blogs">
+
+          <div >
+            <img src="{{'http://localhost:9000/'+user.img}}" id="userImgBlog"/>
+              <span id="name" class="ml-3">
+                {{user.Name}}
+              </span>
+              <div>
+                <a routerLink="/blog/edit/{{b._id}}"> <img src="/assets/edit.png" class="float-right m-2"/> </a>
+                <span class="float-right" style="cursor: pointer;" (click)="delete(b._id)"><i id="deleteBlog" class="fa fa-trash"></i></span>
+              </div>
+          </div>
+
+         
+
+          <div class="mt-3 ml-2" >
+            <p  id="title">  {{b.title}}</p>
+            <div>
+              <p>
+                {{b.body}}
+              </p>
+            </div>
+          </div>
+
+        
+
+          <img class=" w-100" *ngIf="b.img && b.img !== ''" src="{{'http://localhost:9000/'+b.img}} " id="imgBody" style="border-radius: 5px;" />
+          <hr>
+          <p class="text m-2">comments <span class="float-right "><a routerLink="/blog/get/{{b._id}}">  <i class="fa fa-comment" style="font-size: 20px;" ></i></a></span></p>
+      </section>
+
+
+
+      </div>
+
+
+      <section class="col-4">
+       <div id="blog" class="col-12  mt-5  f " *ngIf="user.followers.length>0">
+        <h5>Followers</h5>
+         <div class="d-inline col-3" *ngFor="let f of user.followers" (click)="getfollowingORfollwers(f._id)" >
+             <img src="{{'http://localhost:9000/'+f.img}}" id="FollImg">
+             <p class="d-inline ml-4">{{f.Name}}</p>
+         </div>
+
+
+
+       </div>
+
+       <div id="blog" class="col-12  mt-2" *ngIf="user.following.length>0" >
+          <h5>Following</h5>
+
+          <div class="d-inline col-3 "  *ngFor="let f of user.following" (click)="getfollowingORfollwers(f._id)">
+              <img src="{{'http://localhost:9000/'+f.img}}" id="FollImg">
+              <p class="d-inline ml-4"> {{f.Name}}</p>
+          </div>
+
+      </div>
+      </section>
+
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<div class="bg-dark d-inline-block p-5"  *ngIf="blogs.length==0" style="margin: 100px 700px; border-radius: 100px;">
+  <span style="font-size:18px;">you don't have blogs</span>
+</div>
+
+
+
+
